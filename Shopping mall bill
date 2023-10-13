@@ -1,0 +1,35 @@
+ #promo codes
+ #dasara offer-50%,sunday offer-40%
+kurtas=500;
+punjabidress =1000;
+teashirts=1500;
+print("***Welcome to SPBP shopping mall");
+cname=str(input("Enter customer name"));
+cphno=int(input("Enter customer phone number"));
+k=int(input("Enter number of kurtas"));
+pd=int(input("Enter number of punjabi dresses"));
+t=int(input("Enter number of teas-shirts and pants"));
+bill=((kurtas*k)+(punjabidress*pd)+(teashirts*t));
+pc=input("Enter promo code");
+if(pc=="dasaraoffer"):
+    dis=bill*50/100;
+elif(pc==sundayoffer):
+    dis=bill*40/100;
+elif( bill>1500):
+    dis=bill*15/100;
+elif(bill>1000):
+    dis=bill*10/100;
+elif(bill>500):
+    dis=bill*5/100;
+else:
+    dis=bill*2/100;
+tbill=bill-dis;
+gst=tbill*12/100;
+obill=tbill+gst;
+print("Customer name:",cname);
+print("Customer phno:",cphno);
+print("Bill:",bill);
+print("Discount:",dis);
+print("GST 12%:",gst);
+print("Bill to be paid:",obill);
+print("**Thank you! visit again");
